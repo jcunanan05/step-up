@@ -1,0 +1,54 @@
+{
+  "name": "step-up",
+  "description": "Hi. This is a brand new project designed to make a website for the community project called **Step Up** . It is a static site (for now) to show:",
+  "version": "0.0.1",
+  "main": "server.js",
+  "dependencies": {
+    "@zeit/next-sass": "^1.0.1",
+    "bulma": "^0.7.1",
+    "express": "^4.16.3",
+    "lodash": "^4.17.11",
+    "next": "^7.0.0",
+    "node-sass": "^4.9.3",
+    "react": "^16.5.2",
+    "react-dom": "^16.5.2"
+  },
+  "lint-staged": {
+    "src/**/*.{js,jsx,json,scss}": [
+      "prettier --config ./.prettierrc.json --write",
+      "git add"
+    ]
+  },
+  "devDependencies": {
+    "autoprefixer": "^9.1.5",
+    "eslint": "^5.6.0",
+    "eslint-plugin-react": "^7.11.1",
+    "husky": "^0.14.3",
+    "lint-staged": "^7.3.0",
+    "prettier": "^1.14.3"
+  },
+  "scripts": {
+    "precommit": "lint-staged",
+    "dev": "node server.js",
+    "build": "next build",
+    "start": "NODE_ENV=production node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jcunanan05/step-up.git"
+  },
+  "keywords": [
+    "react",
+    "nextjs",
+    "non-profit",
+    "community",
+    "open-source",
+    "nodejs"
+  ],
+  "author": "Jonathan Albert Cunanan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jcunanan05/step-up/issues"
+  },
+  "homepage": "https://github.com/jcunanan05/step-up#readme"
+}

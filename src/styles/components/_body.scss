@@ -1,0 +1,16 @@
+/*
+ make the document occupy the whole browser window.
+*/
+
+html,
+body,
+div#__next {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-height: 100vh;
+}
+
+div#__next > .App {
+  flex: 1;
+}
