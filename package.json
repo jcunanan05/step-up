@@ -6,6 +6,7 @@
   "dependencies": {
     "@zeit/next-sass": "^1.0.1",
     "bulma": "^0.7.1",
+    "express": "^4.16.3",
     "lodash": "^4.17.11",
     "next": "^7.0.0",
     "node-sass": "^4.9.3",
@@ -28,9 +29,9 @@
   },
   "scripts": {
     "precommit": "lint-staged",
-    "dev": "next",
+    "dev": "node server.js",
     "build": "next build",
-    "start": "next start"
+    "start": "NODE_ENV=production node server.js"
   },
   "repository": {
     "type": "git",
