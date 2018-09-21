@@ -31,7 +31,7 @@
     "precommit": "lint-staged",
     "dev": "node server.js",
     "build": "next build",
-    "start": "NODE_ENV=production node server.js",
+    "start": "npm run build && NODE_ENV=production node server.js",
     "heroku-postbuild": "npm run build"
   },
   "repository": {
