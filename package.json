@@ -6,22 +6,25 @@
   "dependencies": {
     "@zeit/next-sass": "^1.0.1",
     "bulma": "^0.7.1",
+    "lodash": "^4.17.11",
     "next": "^7.0.0",
     "node-sass": "^4.9.3",
     "react": "^16.5.2",
     "react-dom": "^16.5.2"
   },
   "lint-staged": {
-    "src/**/*.{js,jsx,json}": [
+    "src/**/*.{js,jsx,json,scss}": [
       "prettier --config ./.prettierrc.json --write",
       "git add"
     ]
   },
   "devDependencies": {
+    "autoprefixer": "^9.1.5",
     "eslint": "^5.6.0",
-    "prettier": "^1.14.3",
+    "eslint-plugin-react": "^7.11.1",
     "husky": "^0.14.3",
-    "lint-staged": "^7.3.0"
+    "lint-staged": "^7.3.0",
+    "prettier": "^1.14.3"
   },
   "scripts": {
     "precommit": "lint-staged",

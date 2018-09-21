@@ -5,7 +5,7 @@ const Body = ({ children }) => (
   <Fragment>
     <Head />
 
-    { children }
+    <div className="App">{children}</div>
   </Fragment>
 );
 

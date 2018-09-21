@@ -1,6 +1,6 @@
-import Body from '../src/components/__body.js';
+import HomeTemplate from '../src/templates/HomeTemplate';
+
 export default () => (
-  <Body>
-    <h1 className="title">Welcome to next</h1>
-  </Body>
+  <HomeTemplate>
+  </HomeTemplate>
 );
