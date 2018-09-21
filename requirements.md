@@ -11,9 +11,9 @@ This is a community project that aims to:
 * tell what is the Vision / goals and show some proposed community events
 
 ## Project Checklist
-- [ ] Research
-- [ ] Competitive Set for ideas
-- [ ] Mocks
-- [ ] Wireframe
-- [ ] setup dev environment (...NextJS / express (?))
+- [x] Research
+- [x] Competitive Set for ideas
+- [x] Mocks
+- [x] Wireframe
+- [x] setup dev environment (...NextJS / express (?))
 - [ ] Code (React, Bulma, SASS)

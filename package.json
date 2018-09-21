@@ -1,0 +1,41 @@
+{
+  "name": "step-up",
+  "description": "Hi. This is a brand new project designed to make a website for the community project called **Step Up** . It is a static site (for now) to show:",
+  "version": "0.0.1",
+  "main": "server.js",
+  "dependencies": {
+    "@zeit/next-sass": "^1.0.1",
+    "bulma": "^0.7.1",
+    "next": "^7.0.0",
+    "node-sass": "^4.9.3",
+    "react": "^16.5.2",
+    "react-dom": "^16.5.2"
+  },
+  "devDependencies": {
+    "eslint": "^5.6.0",
+    "prettier": "^1.14.3"
+  },
+  "scripts": {
+    "dev": "next",
+    "build": "next build",
+    "start": "next start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jcunanan05/step-up.git"
+  },
+  "keywords": [
+    "react",
+    "nextjs",
+    "non-profit",
+    "community",
+    "open-source",
+    "nodejs"
+  ],
+  "author": "Jonathan Albert Cunanan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jcunanan05/step-up/issues"
+  },
+  "homepage": "https://github.com/jcunanan05/step-up#readme"
+}
