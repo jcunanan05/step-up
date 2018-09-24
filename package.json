@@ -15,7 +15,7 @@
     "autoprefixer": "^9.1.5"
   },
   "lint-staged": {
-    ".*/**/*.{js,jsx,json,scss}": [
+    "*.{js,jsx,json,scss}": [
       "prettier --config ./.prettierrc.json --write",
       "git add"
     ]
