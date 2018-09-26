@@ -7,10 +7,10 @@ class Menu extends Component {
   };
 
   render() {
-    const { left = '', right = '', active = false } = this.props;
+    const { left = '', right = '', active = false, onClick } = this.props;
     const isActive = active ? 'is-active' : '';
     return (
-      <div className={`navbar-menu ${isActive}`}>
+      <div onClick={onClick} className={`navbar-menu ${isActive}`}>
         {this.renderNavbar('start', left)}
         {this.renderNavbar('end', right)}
       </div>
