@@ -1,4 +1,5 @@
 import { Component, Fragment } from 'react';
+import Velocity from '../src/Velocity';
 import HomeTemplate from '../src/templates/HomeTemplate';
 import Columns, { Column } from '../src/components/Columns';
 import Section from '../src/components/Section';
@@ -12,7 +13,7 @@ export default class Index extends Component {
   onMenuClick(event) {
     event.preventDefault();
     const section = document.querySelector(event.target.getAttribute('href'));
-    if (section) section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    if (section) Velocity(section, 'scroll', { duration: 600 });
   }
 
   renderHero = () => (
