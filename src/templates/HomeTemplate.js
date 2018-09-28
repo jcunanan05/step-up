@@ -1,8 +1,8 @@
 import Body from '../components/__body';
 import Footer from '../components/Footer';
 
-const HomeTemplate = ({ banner = '', children }) => (
-  <Body>
+const HomeTemplate = ({ banner = '', children, className = '' }) => (
+  <Body className={`${className}`}>
     {banner}
 
     <main className="main">{children}</main>
