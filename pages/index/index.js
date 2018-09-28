@@ -17,7 +17,7 @@ export default class Index extends Component {
 
   renderHero = () => (
     <Hero
-      className="is-dark is-fullheight home__banner"
+      className="is-primary is-fullheight home__banner"
       head={this.renderNavbar()}
       body={
         <header className="container has-text-centered">
