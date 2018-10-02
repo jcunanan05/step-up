@@ -1,5 +1,5 @@
-import Section from '../../src/components/Section';
-import Columns, { Column } from '../../src/components/Columns';
+import Section from '../../components/Section';
+import Columns, { Column } from '../../components/Columns';
 
 const WhoWeAre = () => (
   <Section name="who-we-are" className="content">

@@ -1,9 +1,9 @@
-import Section from '../../src/components/Section';
-import Columns, { Column } from '../../src/components/Columns';
+import Section from '../../components/Section';
+import Columns, { Column } from '../../components/Columns';
 
-const UpcomingProjects = () => (
-  <Section name="upcoming-projects" className="content">
-    <h2 className="section__title title is-2">Upcoming Projects</h2>
+const News = () => (
+  <Section name="news" className="content">
+    <h2 className="section__title title is-2">News</h2>
     <p>
       Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias placeat vel
       repellendus voluptates temporibus assumenda dolore unde! Tempore,
@@ -49,4 +49,4 @@ const UpcomingProjects = () => (
   </Section>
 );
 
-export default UpcomingProjects;
+export default News;
