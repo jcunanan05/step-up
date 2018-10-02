@@ -1,0 +1,32 @@
+@import '../variables';
+
+.index {
+  /*
+    Making underlines
+  */
+  .section .section__title::after {
+    display: block;
+    position: static;
+    bottom: 0;
+    min-width: 5rem;
+    width: 9%;
+    height: 0.3rem;
+    background-color: $primary-light;
+    content: '';
+  }
+
+  /*
+    Longer underline, for long texts
+  */
+  .section#upcoming-projects .section__title::after {
+    min-width: 6rem;
+    width: 16%;
+  }
+
+  /*
+    Alternate colors for each sections
+  */
+  .main > .section:nth-of-type(odd) {
+    background-color: #eeeeee;
+  }
+}

@@ -1,6 +1,3 @@
-import HomeTemplate from '../src/templates/HomeTemplate';
+import Index from '../src/views/pages/index';
 
-export default () => (
-  <HomeTemplate>
-  </HomeTemplate>
-);
+export default Index;

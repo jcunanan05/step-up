@@ -1,6 +1,6 @@
 import Head from 'next/head';
-import '../styles/app.scss';
-export default () => (
+import '../../styles/app.scss';
+const ModifiedHead = () => (
   <Head>
     <title>Step Up! Community Initiative</title>
     <meta charSet="UTF-8" />
@@ -8,3 +8,5 @@ export default () => (
     <meta httpEquiv="X-UA-Compatible" content="ie=edge" />
   </Head>
 );
+
+export default ModifiedHead;
