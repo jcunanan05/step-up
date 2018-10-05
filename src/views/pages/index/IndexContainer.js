@@ -34,7 +34,7 @@ class IndexContainer extends Component {
       }
       body={
         <header className="container has-text-centered">
-          <h1 className="title is-1">StepUP!</h1>
+          <h1 className="title is-1">Step Up Now!</h1>
           <h2 className="subtitle">Community Initiative</h2>
         </header>
       }
