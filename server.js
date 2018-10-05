@@ -12,6 +12,9 @@ app
   .then(() => {
     const server = express();
 
+    // static files route
+    server.use('/static', express.static(__dirname + '/src/public'));
+
     server.get('*', (req, res) => {
       return handle(req, res);
     });

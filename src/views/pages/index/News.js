@@ -2,14 +2,16 @@ import Section from '../../components/Section';
 import Columns, { Column } from '../../components/Columns';
 
 const News = () => (
-  <Section name="news" className="content">
-    <h2 className="section__title title is-2">News</h2>
-    <p>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias placeat vel
-      repellendus voluptates temporibus assumenda dolore unde! Tempore,
-      inventore perspiciatis quia fugit cumque, sed pariatur sunt repellendus
-      voluptatibus placeat commodi?
-    </p>
+  <Section name="news">
+    <div className="content">
+      <h2 className="section__title title is-2">News</h2>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias placeat
+        vel repellendus voluptates temporibus assumenda dolore unde! Tempore,
+        inventore perspiciatis quia fugit cumque, sed pariatur sunt repellendus
+        voluptatibus placeat commodi?
+      </p>
+    </div>
 
     <Columns>
       <Column className="is-4">

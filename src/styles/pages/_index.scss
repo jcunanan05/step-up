@@ -1,4 +1,4 @@
-@import '../variables';
+$box-radius: 2px;
 
 .index {
   /*
@@ -28,5 +28,27 @@
   */
   .main > .section:nth-of-type(odd) {
     background-color: #eeeeee;
+  }
+
+  /*
+    sharpen the box borders, like a card
+    remove box padding and put it to child
+  */
+  .project {
+    padding: 0;
+    border-radius: $box-radius;
+  }
+
+  /*
+    remove border for image, and make border radius same
+  */
+  .project .image,
+  .image img {
+    margin: 0;
+    border-radius: $box-radius;
+  }
+
+  .project__body {
+    padding: $box-padding;
   }
 }

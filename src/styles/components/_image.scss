@@ -1,0 +1,8 @@
+/*
+    force image to contain from certain aspect ratio
+  */
+
+.image img {
+  overflow: hidden;
+  object-fit: cover;
+}
