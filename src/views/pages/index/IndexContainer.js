@@ -26,7 +26,7 @@ class IndexContainer extends Component {
           right={
             <Fragment>
               {sections.map(({ title }) => (
-                <Item text={title} />
+                <Item text={title} key={title} />
               ))}
             </Fragment>
           }
