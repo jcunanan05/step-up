@@ -1,23 +1,23 @@
 import Section from '../../components/Section';
 import Columns, { Column } from '../../components/Columns';
+import ArticleBox from '../../components/Box/ArticleBox';
 import Image from '../../components/Image';
 import imageSources from './imageSources';
+import { sections } from './data';
 
 const Project = ({ title = '', content = '', image = '' }) => (
-  <article className="box project">
-    {image}
-    <div className="project__body">
-      <h2 className="title">{title}</h2>
-      <p>{content}</p>
-    </div>
-  </article>
+  <Column className="is-4">
+    <ArticleBox title={title} image={image} content={content} />
+  </Column>
 );
 
-const UpcomingProjects = () => (
-  <Section name="upcoming-projects">
-    <h2 className="section__title title is-2">Upcoming Projects</h2>
-    <Columns>
-      <Column className="is-4">
+const UpcomingProjects = () => {
+  const { title } = sections[1];
+  return (
+    <Section name={title}>
+      <h2 className="section__title title is-2">{title}</h2>
+
+      <Columns>
         <Project
           image={
             <Image
@@ -27,13 +27,11 @@ const UpcomingProjects = () => (
             />
           }
           title="Marching Band"
-          content={
-            'The community is planning to make a lively and wonderful band.'
-          }
+          content="Step Up Now is planning to make a lively Marching band!"
         />
-      </Column>
-    </Columns>
-  </Section>
-);
+      </Columns>
+    </Section>
+  );
+};
 
 export default UpcomingProjects;

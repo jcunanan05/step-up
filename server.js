@@ -5,6 +5,11 @@ const dev = process.env.NODE_ENV !== 'production';
 const app = next({ dev });
 const handle = app.getRequestHandler();
 
+// dev environment variables
+if (dev) {
+  require('dotenv').config();
+}
+
 /* eslint-disable no-console */
 
 app
