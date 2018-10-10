@@ -1,4 +1,5 @@
 import { Component } from 'react';
+import { kebabCase } from '../../../helpers';
 
 export const navbarItemClassName = 'navbar-item';
 
@@ -8,10 +9,7 @@ class Item extends Component {
     const { text, sectionId = '' } = this.props;
     if (sectionId != '') return sectionId;
 
-    return text
-      .toLowerCase()
-      .split(' ')
-      .join('-');
+    return kebabCase(text.toLowerCase());
   };
 
   render() {

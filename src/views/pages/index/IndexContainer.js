@@ -4,6 +4,7 @@ import HomeTemplate from '../../templates/HomeTemplate';
 import Navbar from '../../components/Navbar';
 import Item from '../../components/Navbar/Item';
 import Hero from '../../components/Hero';
+import { landingPage, sections } from './data';
 
 class IndexContainer extends Component {
   onMenuClick = event => {
@@ -24,9 +25,9 @@ class IndexContainer extends Component {
           brand={<Item text="StepUP" />}
           right={
             <Fragment>
-              <Item text="Who We Are" />
-              <Item text="Upcoming Projects" />
-              <Item text="News" />
+              {sections.map(({ title }) => (
+                <Item text={title} />
+              ))}
             </Fragment>
           }
           onMenuClick={this.onMenuClick}
@@ -34,8 +35,8 @@ class IndexContainer extends Component {
       }
       body={
         <header className="container has-text-centered">
-          <h1 className="title is-1">Step Up Now!</h1>
-          <h2 className="subtitle">Community Initiative</h2>
+          <h1 className="title is-1">{landingPage.title}</h1>
+          <p className="subtitle">{landingPage.subtitle}</p>
         </header>
       }
     />

@@ -1,54 +1,20 @@
+import processMarkdown from '../../../libraries/Marked';
 import Section from '../../components/Section';
-import Columns, { Column } from '../../components/Columns';
+import { sections } from './data';
 
-const News = () => (
-  <Section name="news">
-    <div className="content">
-      <h2 className="section__title title is-2">News</h2>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias placeat
-        vel repellendus voluptates temporibus assumenda dolore unde! Tempore,
-        inventore perspiciatis quia fugit cumque, sed pariatur sunt repellendus
-        voluptatibus placeat commodi?
-      </p>
-    </div>
-
-    <Columns>
-      <Column className="is-4">
-        <article className="box content">
-          <h2 className="title">Title</h2>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati
-            voluptas molestiae, omnis rerum voluptatum rem recusandae et harum
-            eos mollitia velit itaque, soluta ducimus, veniam illum porro
-            asperiores. Animi, eveniet.
-          </p>
-        </article>
-      </Column>
-      <Column className="is-4">
-        <article className="box content">
-          <h2 className="title">Title</h2>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati
-            voluptas molestiae, omnis rerum voluptatum rem recusandae et harum
-            eos mollitia velit itaque, soluta ducimus, veniam illum porro
-            asperiores. Animi, eveniet.
-          </p>
-        </article>
-      </Column>
-      <Column className="is-4">
-        <article className="box content">
-          <h2 className="title">Title</h2>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati
-            voluptas molestiae, omnis rerum voluptatum rem recusandae et harum
-            eos mollitia velit itaque, soluta ducimus, veniam illum porro
-            asperiores. Animi, eveniet.
-          </p>
-        </article>
-      </Column>
-    </Columns>
-  </Section>
-);
+const News = () => {
+  const { title, content } = sections[2];
+  return (
+    <Section name={title}>
+      <h2 className="section__title title is-2">{title}</h2>
+      <div
+        className="content"
+        dangerouslySetInnerHTML={{
+          __html: processMarkdown(content)
+        }}
+      />
+    </Section>
+  );
+};
 
 export default News;

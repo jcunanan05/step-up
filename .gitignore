@@ -3,6 +3,9 @@
 # node modules
 node_modules
 
+# Environment variables be careful with your api keys
+.env
+
 # next js files 
 /.next
 /out
