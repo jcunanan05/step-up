@@ -1,10 +1,10 @@
 import processMarkdown from '../../../libraries/Marked';
 import Section from '../../components/Section';
 import Columns, { Column } from '../../components/Columns';
-import { sections } from './data';
+import { landingPage } from './defaultData';
 
 const WhoWeAre = () => {
-  const { title, content } = sections[0];
+  const { title, content } = landingPage[0];
   return (
     <Section name={title}>
       <Columns>

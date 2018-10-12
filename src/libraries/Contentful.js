@@ -1,8 +1,18 @@
 const contentful = require('contentful');
 
-const client = contentful.createClient({
-  space: process.env.CONTENTFUL_SPACE_ID,
-  accessToken: process.env.CONTENTFUL_API_KEY
-});
+const defaultConfig = {
+  SPACE_ID: process.env.CONTENTFUL_SPACE_ID,
+  ACCESS_TOKEN: process.env.CONTENTFUL_API_KEY
+};
 
-module.exports = client;
+const createClient = (config = defaultConfig) => {
+  const options = {
+    host: 'cdn.contentful.com',
+    space: config.SPACE_ID,
+    accessToken: config.ACCESS_TOKEN
+  };
+
+  return contentful.createClient(options);
+};
+
+module.exports = { createClient };

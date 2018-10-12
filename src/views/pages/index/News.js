@@ -1,9 +1,9 @@
 import processMarkdown from '../../../libraries/Marked';
 import Section from '../../components/Section';
-import { sections } from './data';
+import { landingPage } from './defaultData';
 
 const News = () => {
-  const { title, content } = sections[2];
+  const { title, content } = landingPage[2];
   return (
     <Section name={title}>
       <h2 className="section__title title is-2">{title}</h2>

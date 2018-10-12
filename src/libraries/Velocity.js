@@ -5,4 +5,4 @@ const Velocity = (element, properties, options = {}) => {
   if (VelocityAnimate !== '') VelocityAnimate(element, properties, options);
 };
 
-export default Velocity;
+module.exports = Velocity;

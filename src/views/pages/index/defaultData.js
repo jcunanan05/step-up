@@ -1,9 +1,9 @@
-export const landingPage = {
+export const banner = {
   title: 'Step Up Now!',
   subtitle: 'Community Project'
 };
 
-export const sections = [
+export const landingPage = [
   {
     title: 'Who We Are',
     content:

@@ -1,8 +1,9 @@
 const express = require('express');
 const router = express.Router();
+const { createClient } = require('../../libraries/Contentful');
 
 router.get('/', (_, res) => {
-  const client = require('../../libraries/Contentful');
+  const client = createClient();
 
   client
     .getEntries({ content_type: 'banner', include: 1 })

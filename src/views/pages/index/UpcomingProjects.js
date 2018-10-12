@@ -3,7 +3,7 @@ import Columns, { Column } from '../../components/Columns';
 import ArticleBox from '../../components/Box/ArticleBox';
 import Image from '../../components/Image';
 import imageSources from './imageSources';
-import { sections } from './data';
+import { landingPage } from './defaultData';
 
 const Project = ({ title = '', content = '', image = '' }) => (
   <Column className="is-4">
@@ -12,7 +12,7 @@ const Project = ({ title = '', content = '', image = '' }) => (
 );
 
 const UpcomingProjects = () => {
-  const { title } = sections[1];
+  const { title } = landingPage[1];
   return (
     <Section name={title}>
       <h2 className="section__title title is-2">{title}</h2>
