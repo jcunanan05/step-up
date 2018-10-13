@@ -10,6 +10,10 @@ export const options = {
   renderer
 };
 
-const processMarkdown = text => marked(text, options);
+const processMarkdown = text => {
+  if (!text) return '';
+
+  return marked(text, options);
+};
 
 export default processMarkdown;

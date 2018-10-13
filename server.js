@@ -4,6 +4,7 @@ const port = parseInt(process.env.PORT, 10) || 3000;
 const dev = process.env.NODE_ENV !== 'production';
 const app = next({ dev });
 const handle = app.getRequestHandler();
+const api = require('./src/server/api');
 
 // dev environment variables
 if (dev) {
@@ -18,11 +19,15 @@ app
     const server = express();
 
     // static files route
-    server.use('/static', express.static(__dirname + '/src/public'));
+    server.use(
+      `/${process.env.PUBLIC_URL}`,
+      express.static(`${__dirname}/src/public`)
+    );
 
-    server.get('*', (req, res) => {
-      return handle(req, res);
-    });
+    server.use('/api', api);
+
+    // pipe requests via nextJS
+    server.get('*', (req, res) => handle(req, res));
 
     server.listen(port, err => {
       if (err) throw err;

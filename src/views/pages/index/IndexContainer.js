@@ -4,7 +4,7 @@ import HomeTemplate from '../../templates/HomeTemplate';
 import Navbar from '../../components/Navbar';
 import Item from '../../components/Navbar/Item';
 import Hero from '../../components/Hero';
-import { landingPage, sections } from './data';
+import Header from './Header';
 
 class IndexContainer extends Component {
   onMenuClick = event => {
@@ -17,30 +17,28 @@ class IndexContainer extends Component {
     if (element) Velocity(element, 'scroll', { duration: 600 });
   }
 
-  renderHero = () => (
-    <Hero
-      className="is-primary is-fullheight home__banner"
-      head={
-        <Navbar
-          brand={<Item text="StepUP" />}
-          right={
-            <Fragment>
-              {sections.map(({ title }) => (
-                <Item text={title} />
-              ))}
-            </Fragment>
-          }
-          onMenuClick={this.onMenuClick}
-        />
-      }
-      body={
-        <header className="container has-text-centered">
-          <h1 className="title is-1">{landingPage.title}</h1>
-          <p className="subtitle">{landingPage.subtitle}</p>
-        </header>
-      }
-    />
-  );
+  renderHero = () => {
+    const { sections, banner } = this.props.data;
+    return (
+      <Hero
+        className="is-primary is-fullheight home__banner"
+        head={
+          <Navbar
+            brand={<Item text="StepUP" />}
+            right={
+              <Fragment>
+                {sections.map(({ title }) => (
+                  <Item text={title} key={title} />
+                ))}
+              </Fragment>
+            }
+            onMenuClick={this.onMenuClick}
+          />
+        }
+        body={<Header title={banner[0].title} subtitle={banner[0].content} />}
+      />
+    );
+  };
 
   render() {
     return (

@@ -30,11 +30,12 @@
     "eslint-plugin-react": "^7.11.1",
     "husky": "^0.14.3",
     "lint-staged": "^7.3.0",
+    "nodemon": "^1.18.4",
     "prettier": "^1.14.3"
   },
   "scripts": {
     "precommit": "lint-staged",
-    "dev": "node server.js",
+    "dev": "nodemon server.js",
     "build": "next build",
     "start": "NODE_ENV=production node server.js",
     "heroku-postbuild": "npm run build"
