@@ -18,7 +18,7 @@ class IndexContainer extends Component {
   }
 
   renderHero = () => {
-    const { landingPage, banner } = this.props;
+    const { sections, banner } = this.props.data;
     return (
       <Hero
         className="is-primary is-fullheight home__banner"
@@ -27,7 +27,7 @@ class IndexContainer extends Component {
             brand={<Item text="StepUP" />}
             right={
               <Fragment>
-                {landingPage.map(({ title }) => (
+                {sections.map(({ title }) => (
                   <Item text={title} key={title} />
                 ))}
               </Fragment>
@@ -35,7 +35,7 @@ class IndexContainer extends Component {
             onMenuClick={this.onMenuClick}
           />
         }
-        body={<Header title={banner.title} subtitle={banner.subtitle} />}
+        body={<Header title={banner[0].title} subtitle={banner[0].content} />}
       />
     );
   };
@@ -43,7 +43,6 @@ class IndexContainer extends Component {
   render() {
     return (
       <HomeTemplate className="index" banner={this.renderHero()}>
-        <Header />
         {this.props.children}
       </HomeTemplate>
     );
