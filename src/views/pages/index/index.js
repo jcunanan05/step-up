@@ -1,7 +1,7 @@
 import WhoWeAre from './WhoWeAre';
 import Projects from './Projects';
 import News from './News';
-import IndexContainer from './IndexContainer';
+import Main from './__main';
 import { createClient } from '../../../libraries/Contentful';
 import DataModel from './DataModel';
 
@@ -17,11 +17,11 @@ const Index = ({ entries }) => {
   const LandingPage = new DataModel(entries);
   const { banner, whoWeAre, projects, news, sections } = LandingPage;
   return (
-    <IndexContainer data={{ banner, sections }}>
+    <Main data={{ banner, sections }}>
       <WhoWeAre data={whoWeAre[0]} />
       <Projects data={projects[0]} />
       <News data={news[0]} />
-    </IndexContainer>
+    </Main>
   );
 };
 
