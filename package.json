@@ -31,23 +31,14 @@
     "husky": "^0.14.3",
     "lint-staged": "^7.3.0",
     "nodemon": "^1.18.4",
-    "prettier": "^1.14.3",
-    "ava": "^0.16.0",
-    "co-exec": "^1.0",
-    "codecov": "^1.0.1",
-    "ghooks": "^1.2.4",
-    "nyc": "^10.0.0",
-    "standard": "^8.4.0"
+    "prettier": "^1.14.3"
   },
   "scripts": {
     "precommit": "lint-staged",
     "dev": "nodemon server.js",
     "build": "next build",
     "start": "NODE_ENV=production node server.js",
-    "heroku-postbuild": "npm run build",
-    "report-coverage": "nyc report --reporter=lcov > coverage.lcov && codecov",
-    "standard": "standard index.js",
-    "test": "nyc ./node_modules/.bin/ava -v"
+    "heroku-postbuild": "npm run build"
   },
   "repository": {
     "type": "git",
@@ -66,10 +57,5 @@
   "bugs": {
     "url": "https://github.com/jcunanan05/step-up/issues"
   },
-  "homepage": "https://github.com/jcunanan05/step-up#readme",
-  "config": {
-    "ghooks": {
-      "pre-commit": "npm run standard"
-    }
-  }
+  "homepage": "https://github.com/jcunanan05/step-up#readme"
 }
