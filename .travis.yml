@@ -1,0 +1,12 @@
+language: node_js
+node_js:
+- stable
+- '6'
+- '4'
+deploy:
+  provider: heroku
+  api_key:
+    secure: 3BA6AXasSaPNrhs0BdLCyBIra3lAwQmy67i1XlPjFeglrkU6PqReqmsuRxKWcLHNA/nR43RAcemy+7D54ReAuv8r8Z47pSHRgQLHGxIsa7CEqdPuTjigV2jyKYt/tOpM5DiUOZdn2OsY7eeVhDPKGmQClFtHTFN9vYopOyJaOjIDw7lyu711q3P/PhUfau3i5tNSYHvEbqSlOUsPBxxyH7SkZHXuaiglJIy4B5MwXtwELg2ewpaQz958JmAQIA/6KmNhlxG48fuXaWfTVbETMIubMcTGAnGqi+dRYmpIQ2wDFg4NeDnx581T5YI6Hr0oT+cu2oxSlW6xnNaJ1X6Z4ft6WZIFTfM19+d8k08iPt5Ulb/V1CcwXjGjhUz4rslMVtGOCS2D/gG1bde/pImaZH78ZvWj2l4kiRKnmcBHUJBdDgTNEJWoh7Rd9Pf8iFmixUw8J9oXwm/yt2m9C9NkTzBOTVw7O7n6k6QNsUO7QPU/zmkXe3SC0+3zOiYSkJ8ge7xpzQeFd0FycWP+6hBcY5IbemaCfhF9E9RxJbbuNn1B7iDn2M6YARi8s7YbSf+GpD0oFmxQXYl5L4fX9W0dHXnZhHpYVkRA0ejrag25KRGMhoKKx69HXorRv5wh5DXh1ZEEJGRDjXr0xxlyJ4IrUz0r25K4sK+ENWUmsdxe9Xg=
+  app: stepupnow
+  on:
+    repo: jcunanan05/step-up
