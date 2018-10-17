@@ -14,18 +14,16 @@ class Navbar extends Component {
     if (element) Velocity(element, 'scroll', { duration: 600 });
   }
 
-  render() {
+  renderSections = () => {
     const { sections } = this.props;
+    return sections.map(({ title }) => <Item text={title} key={title} />);
+  };
+
+  render() {
     return (
       <NavbarComponent
         brand={<Item text="StepUP" />}
-        right={
-          <Fragment>
-            {sections.map(({ title }) => (
-              <Item text={title} key={title} />
-            ))}
-          </Fragment>
-        }
+        right={<Fragment>{this.renderSections()}</Fragment>}
         onMenuClick={this.onMenuClick}
       />
     );

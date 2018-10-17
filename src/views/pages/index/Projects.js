@@ -1,8 +1,9 @@
+import { Component } from 'react';
 import Section from '../../components/Section';
 import Columns, { Column } from '../../components/Columns';
 import ArticleBox from '../../components/Box/ArticleBox';
-import Image from '../../components/Image';
-import imageSources from './imageSources';
+import ImageWithOverlay from '../../components/Image/ImageWithOverlay';
+import ImageModel from './Model/Image';
 
 const Project = ({ title = '', content = '', image = '' }) => (
   <Column className="is-4">
@@ -10,27 +11,37 @@ const Project = ({ title = '', content = '', image = '' }) => (
   </Column>
 );
 
-const Projects = ({ data }) => {
-  const { title } = data;
-  return (
-    <Section name={title}>
-      <h2 className="section__title title is-2">{title}</h2>
-
-      <Columns>
+class Projects extends Component {
+  renderProjects = () => {
+    return this.props.projects.map(({ title, content, image }) => {
+      const Image = new ImageModel().setImage(image);
+      return (
         <Project
+          key={title}
           image={
-            <Image
+            <ImageWithOverlay
               className="is-5by3"
-              alt="Marching Band"
-              src={imageSources.marchingBand3}
+              alt={Image.fields.title}
+              src={Image.url}
             />
           }
-          title="Marching Band"
-          content="Step Up Now is planning to make a lively Marching band!"
+          title={title}
+          content={content}
         />
-      </Columns>
-    </Section>
-  );
-};
+      );
+    });
+  };
+
+  render() {
+    const { title } = this.props.data;
+    return (
+      <Section name={title}>
+        <h2 className="section__title title is-2">{title}</h2>
+
+        <Columns>{this.renderProjects()}</Columns>
+      </Section>
+    );
+  }
+}
 
 export default Projects;
