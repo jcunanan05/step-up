@@ -1,3 +1,5 @@
+import imageSources from './imageSources';
+
 const defaultData = [
   {
     title: 'Step Up Now!',
@@ -19,6 +21,17 @@ const defaultData = [
     title: 'News',
     content: 'Community news, and information.',
     type: 'content'
+  }
+];
+
+export const projectData = [
+  {
+    title: 'Marching Band',
+    content: 'Step Up Now is planning to make a lively Marching band!',
+    image: {
+      title: 'Marching Band',
+      src: imageSources.marchingBand3
+    }
   }
 ];
 

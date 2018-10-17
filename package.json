@@ -35,7 +35,7 @@
   },
   "scripts": {
     "precommit": "lint-staged",
-    "dev": "nodemon server.js",
+    "dev": "nodemon --config nodemon.json",
     "build": "next build",
     "start": "NODE_ENV=production node server.js",
     "heroku-postbuild": "npm run build"

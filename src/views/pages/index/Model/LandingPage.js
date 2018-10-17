@@ -1,22 +1,15 @@
+import Model from './';
 import { sortBy } from 'lodash';
 
-class ModelData {
+class LandingPage extends Model {
   constructor(entries = []) {
-    this.entries = entries.items;
+    super(entries);
     this.type = {
       banner: 'banner',
       whoWeAre: 'whoweare',
       projects: 'projects',
       news: 'news'
     };
-  }
-
-  typeOf(type) {
-    return entry => entry.fields.type === type;
-  }
-
-  set setEntries(entries) {
-    this.entries = [...entries, ...this.entries];
   }
 
   getFields(entry) {
@@ -57,4 +50,4 @@ class ModelData {
   }
 }
 
-export default ModelData;
+export default LandingPage;
