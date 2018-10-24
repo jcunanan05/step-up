@@ -1,10 +1,11 @@
+import { createClient } from '../../../libraries/Contentful';
+import LandingPageModel from './Model/LandingPage';
+import PostsModel from './Model/Posts';
 import WhoWeAre from './WhoWeAre';
 import Projects from './Projects';
 import News from './News';
 import Main from './Main';
-import { createClient } from '../../../libraries/Contentful';
-import LandingPageModel from './Model/LandingPage';
-import PostsModel from './Model/Posts';
+import Contact from './Contact';
 
 async function getInitialProps() {
   const client = createClient();
@@ -18,13 +19,19 @@ async function getInitialProps() {
 const Index = ({ entries }) => {
   const LandingPage = new LandingPageModel().setEntries(entries.landingPage);
   const Posts = new PostsModel().setEntries(entries.posts);
-  const { banner, whoWeAre, projects, news, sections } = LandingPage;
+  const { banner, whoWeAre, projects, news, allSections } = LandingPage;
 
   return (
-    <Main data={{ banner: banner[0], sections }}>
+    <Main
+      data={{
+        banner: banner[0],
+        sections: allSections
+      }}
+    >
       <WhoWeAre data={whoWeAre[0]} />
       <Projects data={projects[0]} projects={Posts.projects} />
       <News data={news[0]} news={Posts.news} />
+      <Contact />
     </Main>
   );
 };
