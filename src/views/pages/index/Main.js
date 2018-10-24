@@ -1,8 +1,8 @@
 import { Component } from 'react';
 import HomeTemplate from '../../templates/HomeTemplate';
-import Navbar from './__navbar';
+import Navbar from './Navbar';
 import Hero from '../../components/Hero';
-import Header from './__header';
+import Header from './Header';
 import Head from '../../components/__head';
 
 class Main extends Component {
@@ -19,7 +19,7 @@ class Main extends Component {
           />
         }
       >
-        <Head title={banner.title} />
+        <Head />
         {this.props.children}
       </HomeTemplate>
     );
