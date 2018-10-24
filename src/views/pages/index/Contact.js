@@ -2,16 +2,6 @@ import Section from '../../components/Section';
 import Columns, { Column } from '../../components/Columns';
 import MarkdownContent from '../../components/MarkdownContent';
 
-const address = `
-### Find us at: 
-
-2125 Weston Road,
-
-York, Ontario
-
-M9N 1X8
-`;
-
 const GoogleMaps = ({ className = '' }) => (
   <iframe
     className={className}
@@ -21,18 +11,22 @@ const GoogleMaps = ({ className = '' }) => (
   />
 );
 
-const Contact = () => (
-  <Section name="Contact Us">
-    <h2 className="section__title title is-2">Contact Us</h2>
-    <Columns>
-      <Column className="is-6">
-        <MarkdownContent content={address} />
-      </Column>
-      <Column className="is-6">
-        <GoogleMaps className="google-maps" />
-      </Column>
-    </Columns>
-  </Section>
-);
+const Contact = ({ data }) => {
+  const { title, content } = data;
+  return (
+    <Section name={title}>
+      <h2 className="section__title title is-2">{title}</h2>
+      <Columns>
+        <Column className="is-6">
+          <MarkdownContent content={content} />
+        </Column>
+        <Column className="is-6">
+          <strong>Map: </strong>
+          <GoogleMaps className="google-maps" />
+        </Column>
+      </Columns>
+    </Section>
+  );
+};
 
 export default Contact;

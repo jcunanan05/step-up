@@ -19,7 +19,14 @@ async function getInitialProps() {
 const Index = ({ entries }) => {
   const LandingPage = new LandingPageModel().setEntries(entries.landingPage);
   const Posts = new PostsModel().setEntries(entries.posts);
-  const { banner, whoWeAre, projects, news, allSections } = LandingPage;
+  const {
+    banner,
+    whoWeAre,
+    projects,
+    news,
+    contact,
+    allSections
+  } = LandingPage;
 
   return (
     <Main
@@ -31,7 +38,7 @@ const Index = ({ entries }) => {
       <WhoWeAre data={whoWeAre[0]} />
       <Projects data={projects[0]} projects={Posts.projects} />
       <News data={news[0]} news={Posts.news} />
-      <Contact />
+      <Contact data={contact[0]} />
     </Main>
   );
 };

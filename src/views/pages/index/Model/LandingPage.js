@@ -8,7 +8,8 @@ class LandingPage extends Model {
       banner: 'banner',
       whoWeAre: 'whoweare',
       projects: 'projects',
-      news: 'news'
+      news: 'news',
+      contact: 'contact'
     };
   }
 
@@ -47,6 +48,11 @@ class LandingPage extends Model {
   get news() {
     const { entries, typeOf, type, getFields } = this;
     return entries.filter(typeOf(type.news)).map(entry => getFields(entry));
+  }
+
+  get contact() {
+    const { entries, typeOf, type, getFields } = this;
+    return entries.filter(typeOf(type.contact)).map(entry => getFields(entry));
   }
 }
 
