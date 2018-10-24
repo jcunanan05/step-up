@@ -21,7 +21,7 @@ class LandingPage extends Model {
     };
   }
 
-  get sections() {
+  get allSections() {
     const { entries, getFields, type } = this;
     const sections = entries
       .map(entry => getFields(entry))
