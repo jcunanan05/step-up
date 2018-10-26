@@ -3,10 +3,6 @@ import Model from './';
 class Posts extends Model {
   constructor(entries = []) {
     super(entries);
-    this.type = {
-      project: 'project',
-      news: 'news'
-    };
   }
 
   getFields(entry) {
@@ -20,14 +16,9 @@ class Posts extends Model {
     };
   }
 
-  get projects() {
-    const { entries, type, getFields, typeOf } = this;
-    return entries.filter(typeOf(type.project)).map(entry => getFields(entry));
-  }
-
-  get news() {
-    const { entries, type, getFields, typeOf } = this;
-    return entries.filter(typeOf(type.news)).map(entry => getFields(entry));
+  get allPosts() {
+    const { entries, getFields } = this;
+    return entries.map(entry => getFields(entry));
   }
 }
 

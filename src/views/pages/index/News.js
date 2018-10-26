@@ -3,7 +3,7 @@ import Section from '../../components/Section';
 import Columns, { Column } from '../../components/Columns';
 import ImageWithOverlay from '../../components/Image/ImageWithOverlay';
 import MarkdownContent from '../../components/MarkdownContent';
-import ImageModel from './Model/Image';
+import ImageModel from '../../../models/Image';
 import ArticleBox from '../../components/Box/ArticleBox';
 
 const NewsPost = ({ title = '', content = '', image = '' }) => (
@@ -15,7 +15,7 @@ const NewsPost = ({ title = '', content = '', image = '' }) => (
 class News extends Component {
   renderNews = () => {
     return this.props.news.map(({ title, content, image }) => {
-      const Image = new ImageModel().setImage(image);
+      const Image = new ImageModel(image);
       return (
         <NewsPost
           key={title}

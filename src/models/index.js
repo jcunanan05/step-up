@@ -3,12 +3,7 @@ class Model {
     this.entries = entries.items || [];
   }
 
-  setEntries(entries) {
-    this.entries = [...entries.items, ...this.entries];
-    return this;
-  }
-
-  getEntries() {
+  get getEntries() {
     return this.entries;
   }
 
