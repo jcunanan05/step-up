@@ -4,7 +4,6 @@ const port = parseInt(process.env.PORT, 10) || 3000;
 const dev = process.env.NODE_ENV !== 'production';
 const app = next({ dev });
 const handle = app.getRequestHandler();
-const api = require('./src/server/api');
 
 // dev environment variables
 if (dev) {
@@ -23,8 +22,6 @@ app
       `/${process.env.PUBLIC_URL}`,
       express.static(`${__dirname}/src/public`)
     );
-
-    server.use('/api', api);
 
     // pipe requests via nextJS
     server.get('*', (req, res) => handle(req, res));

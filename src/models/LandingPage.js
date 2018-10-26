@@ -32,27 +32,35 @@ class LandingPage extends Model {
 
   get banner() {
     const { entries, typeOf, type, getFields } = this;
-    return entries.filter(typeOf(type.banner)).map(entry => getFields(entry));
+    return entries
+      .filter(typeOf(type.banner))
+      .map(entry => getFields(entry))[0];
   }
 
   get whoWeAre() {
     const { entries, typeOf, type, getFields } = this;
-    return entries.filter(typeOf(type.whoWeAre)).map(entry => getFields(entry));
+    return entries
+      .filter(typeOf(type.whoWeAre))
+      .map(entry => getFields(entry))[0];
   }
 
   get projects() {
     const { entries, typeOf, type, getFields } = this;
-    return entries.filter(typeOf(type.projects)).map(entry => getFields(entry));
+    return entries
+      .filter(typeOf(type.projects))
+      .map(entry => getFields(entry))[0];
   }
 
   get news() {
     const { entries, typeOf, type, getFields } = this;
-    return entries.filter(typeOf(type.news)).map(entry => getFields(entry));
+    return entries.filter(typeOf(type.news)).map(entry => getFields(entry))[0];
   }
 
   get contact() {
     const { entries, typeOf, type, getFields } = this;
-    return entries.filter(typeOf(type.contact)).map(entry => getFields(entry));
+    return entries
+      .filter(typeOf(type.contact))
+      .map(entry => getFields(entry))[0];
   }
 }
 
