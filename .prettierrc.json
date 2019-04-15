@@ -1,4 +1,0 @@
-{
-  "singleQuote": true,
-  "prettier.cssEnable": ["css", "sass", "scss"]
-}
